@@ -56,3 +56,11 @@ To remove generated files and the dist folder
     grunt clean
 
 
+## Attributions
+
+1. [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
+2. [Twitter Bootstrap](http://twitter.github.io/bootstrap/index.html)
+3. [SASS Twitter Bootstrap](https://github.com/jlong/sass-twitter-bootstrap)
+
+The rest are open source projects that are known to all.
+

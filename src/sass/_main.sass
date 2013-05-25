@@ -1,0 +1,30 @@
+//* scss-compile-options: --debug-info
+
+@import 'bootstrap/mixins'
+
+.grunt-coffee-boilerplate
+  > header
+    border-bottom: 1px solid hsl(0, 50%, 80%)
+    padding: 20px 10px
+    +translucent-background(hsl(220, 50%, 50%), 0.6)
+
+  > footer
+    border-top: 1px solid hsl(0, 40%, 64%)
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 20px
+    +translucent-background(hsl(120, 50%, 80%), 0.6)
+
+  #main 
+    +clearfix
+    border: 1px solid green
+
+  #leftnav
+    float: left
+
+  #content
+    float: left
+    margin-left: 10px
+

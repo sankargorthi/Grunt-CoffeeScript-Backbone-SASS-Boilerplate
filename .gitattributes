@@ -1,0 +1,2 @@
+# Auto detect text files and fix their line endings. Normalize to LF instead of CRLF.
+*                       text=auto

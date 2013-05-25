@@ -32,7 +32,7 @@ require ['jquery-1.9.1', 'underscore', 'handlebars'], ->
                 console.log 'clicked', new Date
                 return false
 
-        sm.views.app = new App 
+        app.views.app = new App 
 
         return
     return

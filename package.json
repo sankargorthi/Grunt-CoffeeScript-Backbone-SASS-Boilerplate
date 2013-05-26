@@ -1,6 +1,7 @@
 {
   "name": "grunt-backbone-coffeescript-boilerplate",
   "description": "A backbone boilerplate application that works on grunt, and uses requirejs, handlebars, twitter bootstrap, modernizr and sass",
+  "keywords": ["bootstrap", "sass", "requirejs", "handlebars", "backbone", "grunt", "boilerplate", "modernizr", "coffeescript"],
   "version": "0.0.1",
   "dependencies": {
     "express": "latest",

@@ -4,7 +4,7 @@
   "keywords": ["bootstrap", "sass", "requirejs", "handlebars", "backbone", "grunt", "boilerplate", "modernizr", "coffeescript"],
   "version": "0.0.1",
   "dependencies": {
-    "express": "latest",
+    "express": "^3",
     "coffee-script": "latest"
   },
   "devDependencies": {

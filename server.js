@@ -1,15 +1,17 @@
-var express = require('express'),
-    app = express(),
-    configProps = require('./config.json');
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+var configProps = require('./config.json');
 
-app.use(express.static(__dirname));
-app.configure(function() {
-    app.use(express.bodyParser());
-});
+app.use(express.static('dist'));
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.get('/', function(req, res) {
     res.sendfile('dist/index.html');
 });
-app.listen(configProps.port, configProps.hostName);
-console.log("Running at http://" + configProps.hostName + ':' + configProps.port);
 
+app.listen(configProps.port, configProps.hostName, function () {
+    console.log('Running at http://' + configProps.hostName + ':' + configProps.port);
+});

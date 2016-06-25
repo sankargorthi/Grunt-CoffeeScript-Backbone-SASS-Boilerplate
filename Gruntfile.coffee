@@ -47,7 +47,7 @@ module.exports = (grunt) ->
                     'dist/styles/bootstrap.css': 'src/sass/bootstrap/bootstrap.scss'
                     'dist/styles/responsive.css': 'src/sass/bootstrap/responsive.scss'
                 ]
-                    
+
             # This will be used when watch triggers a re-compile of sass files
             main:
                 options:
@@ -62,10 +62,10 @@ module.exports = (grunt) ->
                     trace: true
                 files: [
                     'dist/styles/core.css': 'src/sass/core.sass'
-                    'dist/styles/bootstrap.css': 'src/sass/bootstrap/bootstrap.scss' 
-                    'dist/styles/responsive.css': 'src/sass/bootstrap/responsive.scss' 
+                    'dist/styles/bootstrap.css': 'src/sass/bootstrap/bootstrap.scss'
+                    'dist/styles/responsive.css': 'src/sass/bootstrap/responsive.scss'
                 ]
- 
+
         copy:
             main:
                 files: [
@@ -86,7 +86,7 @@ module.exports = (grunt) ->
                     dest: 'dist'
                     filter: 'isFile'
                 ,
-                    hbs 
+                    hbs
                 ]
 
             dist:
@@ -125,15 +125,7 @@ module.exports = (grunt) ->
                 ]
                 tasks: ['sass:main']
 
-        clean:
-            bkup:
-                src: ['**/*~']
-                filter: 'isFile'
-            js:
-                cwd: 'src'
-                src: ['**/*.js']
-                filter: 'isFile'
-            dist: 'dist'
+        clean: ['dist']
 
 
     grunt.loadNpmTasks 'grunt-contrib-copy'
@@ -151,7 +143,7 @@ module.exports = (grunt) ->
         'sass:main'
     ]
 
-    grunt.registerTask 'dist', [
+    grunt.registerTask 'prod', [
         'clean'
         'copy:dist'
         'coffee'
@@ -160,8 +152,7 @@ module.exports = (grunt) ->
     ]
 
     # grunt.registerTask 'lint', [
-    # 
+    #
     # ]
 
     return
-
